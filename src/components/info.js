@@ -23,7 +23,9 @@ export default function info() {
       </div>
       <div className="h1 code mt-4 mb-3">async {"{"}</div>
       <div className="text-muted mx-5 my-4 h3 info">
-        Seasoned marketing executive, experienced marketing technologist and a machine learning & blockchain enthusiast. Follow me. Contact me. Etc....
+        Seasoned marketing executive, experienced marketing technologist and a machine learning & red wine enthusiast.
+        <br />
+        <br />Follow me. Contact me. Etc....
       </div>
       <div className="h1 code mt-2 mb-3">{"}"}</div>
       <div className="h1 mt-5">

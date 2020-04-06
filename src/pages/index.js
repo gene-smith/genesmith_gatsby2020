@@ -10,6 +10,7 @@ function index() {
       <Helmet>
         <meta charSet="utf-8" />
         <title>Home | Gene Smith</title>
+        <link rel="icon" href="../images/soul2soul.ico" type="image/x-icon" />
       </Helmet>
     </div>
   )
