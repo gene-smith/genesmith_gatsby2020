@@ -10,7 +10,8 @@ import {
   FaPinterest as Pinterest,
   FaSpotify as Spotify,
   FaSoundcloud as Soundcloud,
-  FaMediumM as Medium
+  FaMediumM as Medium,
+  FaKeybase as Keybase
 } from "react-icons/fa"
 
 export default function info() {
@@ -23,9 +24,7 @@ export default function info() {
       </div>
       <div className="h1 code mt-4 mb-3">async {"{"}</div>
       <div className="text-muted mx-5 my-4 h3 info">
-        Seasoned marketing executive, experienced marketing technologist and a machine learning & red wine enthusiast.
-        <br />
-        <br />Follow me. Contact me. Etc....
+        Seasoned marketing executive, experienced marketing technologist and a machine learning & red wine enthusiast. Follow me. Contact me. Etc....
       </div>
       <div className="h1 code mt-2 mb-3">{"}"}</div>
       <div className="h1 mt-5">
@@ -34,6 +33,9 @@ export default function info() {
         </a>
         <a className="mr-5 icon" href="https://angel.co/gene-smith?public_profile=1" target="_blank" rel="noopener noreferrer">
           <AngelList />
+        </a>
+        <a className="mr-5 icon" href="https://keybase.io/genesmith" target="_blank" rel="noopener noreferrer">
+          <Keybase />
         </a>
         <a className="mr-5 icon" href="https://www.facebook.com/gene.r.smith" target="_blank" rel="noopener noreferrer">
           <Facebook />
