@@ -7,9 +7,7 @@ import {
   FaAngellist as AngelList,
   FaFacebookF as Facebook,
   FaRedditAlien as Reddit,
-  FaPinterest as Pinterest,
   FaSpotify as Spotify,
-  FaSoundcloud as Soundcloud,
   FaMediumM as Medium,
   FaKeybase as Keybase
 } from "react-icons/fa"
@@ -24,7 +22,7 @@ export default function info() {
       </div>
       <div className="h1 code mt-4 mb-3">async {"{"}</div>
       <div className="text-muted mx-5 my-4 h3 info">
-        Seasoned marketing executive, experienced marketing technologist and a machine learning & red wine enthusiast. Follow me. Contact me. Etc....
+        Seasoned marketing executive, experienced marketing technologist and a machine learning & red wine enthusiast. Howard U. Follow me. Contact me. Etc....
       </div>
       <div className="h1 code mt-2 mb-3">{"}"}</div>
       <div className="h1 mt-5">
@@ -52,14 +50,8 @@ export default function info() {
         <a className="mr-5 icon" href="https://medium.com/@gene_r_smith" target="_blank" rel="noopener noreferrer">
           <Medium />
         </a>
-        <a className="mr-5 icon" href="http://www.pinterest.com/gene_smith.com/gene-smith" target="_blank" rel="noopener noreferrer">
-          <Pinterest />
-        </a>
         <a className="mr-5 icon" href="https://open.spotify.com/user/genesmith?si=xDf3RF02RFCHuXH5FZB82w" target="_blank" rel="noopener noreferrer">
           <Spotify />
-        </a>
-        <a className="mr-5 icon" href="https://soundcloud.com/gene_smith" target="_blank" rel="noopener noreferrer">
-          <Soundcloud />
         </a>
       </div>
     </div >
