@@ -50,8 +50,8 @@ export default function Home() {
 
         {/* Responsive intro text with better mobile spacing */}
         <div className='text-gray-600 dark:text-gray-400 mx-4 sm:mx-8 lg:mx-12 my-6 sm:my-8 text-lg sm:text-xl lg:text-2xl info leading-relaxed'>
-          Seasoned marketing executive, experienced marketing technologist and a
-          machine learning & red wine enthusiast. Howard U. Follow me. Contact
+          Seasoned marketing exectutive & technologist, experienced solutions architect and an
+          AI & red wine enthusiast. Howard U. Follow me. Contact
           me. Etc....
         </div>
 
