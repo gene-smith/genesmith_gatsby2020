@@ -43,32 +43,6 @@ const ResumeSection = ({ resumeData }) => {
             </section>
           )}
 
-          {/* Education Section */}
-          {education && education.length > 0 && (
-            <section>
-              <h2 className='text-2xl sm:text-3xl lg:text-4xl font-bold text-brand mb-4 sm:mb-6 lg:mb-8'>
-                Education
-              </h2>
-              <div className='space-y-4 sm:space-y-6'>
-                {education.map((edu, index) => (
-                  <div
-                    key={index}
-                    className='border-l-4 border-brand pl-4 sm:pl-6'
-                  >
-                    <h3 className='text-lg sm:text-xl lg:text-2xl font-semibold text-gray-900 dark:text-white mb-1'>
-                      {edu.degree}
-                    </h3>
-                    <h4 className='text-base sm:text-lg lg:text-xl text-brand font-medium mb-2'>
-                      {edu.institution}
-                    </h4>
-                    <p className='text-sm sm:text-base text-gray-600 dark:text-gray-400'>
-                      {edu.duration}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </section>
-          )}
         </div>
 
         {/* Right Column */}
@@ -115,6 +89,33 @@ const ResumeSection = ({ resumeData }) => {
                         {cert.year}
                       </p>
                     </div>
+                  </div>
+                ))}
+              </div>
+            </section>
+          )}
+
+          {/* Education Section */}
+          {education && education.length > 0 && (
+            <section>
+              <h2 className='text-2xl sm:text-3xl lg:text-4xl font-bold text-brand mb-4 sm:mb-6 lg:mb-8'>
+                Education
+              </h2>
+              <div className='space-y-4 sm:space-y-6'>
+                {education.map((edu, index) => (
+                  <div
+                    key={index}
+                    className='border-l-4 border-brand pl-4 sm:pl-6'
+                  >
+                    <h3 className='text-lg sm:text-xl lg:text-2xl font-semibold text-gray-900 dark:text-white mb-1'>
+                      {edu.degree}
+                    </h3>
+                    <h4 className='text-base sm:text-lg lg:text-xl text-brand font-medium mb-2'>
+                      {edu.institution}
+                    </h4>
+                    <p className='text-sm sm:text-base text-gray-600 dark:text-gray-400'>
+                      {edu.duration}
+                    </p>
                   </div>
                 ))}
               </div>

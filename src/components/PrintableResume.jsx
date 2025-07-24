@@ -48,27 +48,6 @@ const PrintableResume = React.forwardRef(({ resumeData }, ref) => {
             </section>
           )}
 
-          {/* Education Section */}
-          {education && education.length > 0 && (
-            <section className='break-inside-avoid'>
-              <h2 className='text-2xl font-bold text-gray-800 mb-4 border-b border-gray-400 pb-1'>
-                EDUCATION
-              </h2>
-              <div className='space-y-3'>
-                {education.map((edu, index) => (
-                  <div key={index} className='break-inside-avoid'>
-                    <h3 className='text-lg font-semibold text-gray-900'>
-                      {edu.degree}
-                    </h3>
-                    <h4 className='text-base font-medium text-gray-700'>
-                      {edu.institution}
-                    </h4>
-                    <p className='text-sm text-gray-600'>{edu.duration}</p>
-                  </div>
-                ))}
-              </div>
-            </section>
-          )}
         </div>
 
         {/* Right Column */}
@@ -115,6 +94,28 @@ const PrintableResume = React.forwardRef(({ resumeData }, ref) => {
               </div>
             </section>
           )}
+
+          {/* Education Section */}
+          {education && education.length > 0 && (
+            <section className='break-inside-avoid'>
+              <h2 className='text-2xl font-bold text-gray-800 mb-4 border-b border-gray-400 pb-1'>
+                EDUCATION
+              </h2>
+              <div className='space-y-3'>
+                {education.map((edu, index) => (
+                  <div key={index} className='break-inside-avoid'>
+                    <h3 className='text-lg font-semibold text-gray-900'>
+                      {edu.degree}
+                    </h3>
+                    <h4 className='text-base font-medium text-gray-700'>
+                      {edu.institution}
+                    </h4>
+                    <p className='text-sm text-gray-600'>{edu.duration}</p>
+                  </div>
+                ))}
+              </div>
+            </section>
+          )}
         </div>
       </div>
 
@@ -130,6 +131,9 @@ const PrintableResume = React.forwardRef(({ resumeData }, ref) => {
             color: black !important;
             font-size: 11pt !important;
             line-height: 1.3 !important;
+            position: static !important;
+            left: auto !important;
+            top: auto !important;
           }
           
           .printable-resume h1 {
@@ -169,22 +173,6 @@ const PrintableResume = React.forwardRef(({ resumeData }, ref) => {
           .printable-resume .break-inside-avoid {
             break-inside: avoid !important;
             page-break-inside: avoid !important;
-          }
-          
-          /* Hide everything else when printing from the main page */
-          body * {
-            visibility: hidden;
-          }
-          
-          .printable-resume,
-          .printable-resume * {
-            visibility: visible;
-          }
-          
-          .printable-resume {
-            position: absolute;
-            left: 0;
-            top: 0;
           }
         }
       `}</style>

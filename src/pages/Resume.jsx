@@ -15,10 +15,25 @@ export default function Resume() {
   const handlePrint = useReactToPrint({
     content: () => printableResumeRef.current,
     documentTitle: 'Gene_Smith_Resume',
+    removeAfterPrint: false,
+    onBeforeGetContent: () => {
+      // Ensure the printable component is ready
+      return new Promise((resolve) => {
+        setTimeout(() => {
+          resolve()
+        }, 300)
+      })
+    },
     pageStyle: `
       @page {
         size: A4;
         margin: 0.5in;
+      }
+      @media print {
+        html, body {
+          height: initial !important;
+          overflow: initial !important;
+        }
       }
     `,
   })
@@ -115,7 +130,7 @@ export default function Resume() {
         <ResumeSection resumeData={resumeData} />
 
         {/* Hidden Printable Resume Component */}
-        <div style={{ display: 'none' }}>
+        <div style={{ position: 'absolute', left: '-9999px', top: '-9999px' }}>
           <PrintableResume ref={printableResumeRef} resumeData={resumeData} />
         </div>
       </div>
