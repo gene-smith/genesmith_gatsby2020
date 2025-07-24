@@ -1,97 +1,168 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby's default starter
-</h1>
+# Gene Portfolio
 
-Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+[![Deploy to GitHub Pages](https://github.com/gene-smith/gene-portfolio/actions/workflows/deploy.yml/badge.svg)](https://github.com/gene-smith/gene-portfolio/actions/workflows/deploy.yml)
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
+A modern, responsive portfolio website built with React, Vite, and Tailwind CSS. Features a dynamic resume section powered by YAML data and automatic deployment to GitHub Pages.
 
-## 🚀 Quick start
+## 🚀 Quick Start
 
-1.  **Create a Gatsby site.**
+### Prerequisites
+- Node.js (version 16 or higher)
+- npm or yarn package manager
 
-    Use the Gatsby CLI to create a new site, specifying the default starter.
+### Installation
 
-    ```sh
-    # create a new Gatsby site using the default starter
-    gatsby new my-default-starter https://github.com/gatsbyjs/gatsby-starter-default
-    ```
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/gene-smith/gene-portfolio.git
+   cd gene-portfolio
+   ```
 
-1.  **Start developing.**
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
 
-    Navigate into your new site’s directory and start it up.
+3. **Start the development server**:
+   ```bash
+   npm run dev
+   ```
 
-    ```sh
-    cd my-default-starter/
-    gatsby develop
-    ```
+4. **Open your browser** and navigate to `http://localhost:5173`
 
-1.  **Open the source code and start editing!**
+### Build for Production
 
-    Your site is now running at `http://localhost:8000`!
+```bash
+npm run build
+npm run preview  # Preview the production build locally
+```
 
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
+## 📁 Project Structure
 
-    Open the `my-default-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+```
+gene-portfolio/
+├── public/
+│   ├── resume.yaml          # Resume data (edit this!)
+│   └── resume.pdf           # PDF version of resume
+├── src/
+│   ├── components/          # React components
+│   ├── pages/              # Page components
+│   ├── contexts/           # React contexts (theme, etc.)
+│   ├── hooks/              # Custom React hooks
+│   └── utils/              # Utility functions
+├── .github/workflows/      # GitHub Actions for deployment
+└── package.json
+```
 
-## 🧐 What's inside?
+## Resume Data Management
 
-A quick look at the top-level files and directories you'll see in a Gatsby project.
+This project includes a data-driven resume section that displays information stored in a YAML file. To update the resume information displayed in the application, follow these steps:
 
-    .
-    ├── node_modules
-    ├── src
-    ├── .gitignore
-    ├── .prettierrc
-    ├── gatsby-browser.js
-    ├── gatsby-config.js
-    ├── gatsby-node.js
-    ├── gatsby-ssr.js
-    ├── LICENSE
-    ├── package-lock.json
-    ├── package.json
-    └── README.md
+### Updating Resume Data
 
-1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
+1. **Locate the `resume.yaml` file**:
+   - The file is located in the `/public` directory: `public/resume.yaml`.
 
-2.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
+2. **Edit the YAML File**:
+   - Open the `resume.yaml` file in a text editor.
+   - Add or edit entries under the `experience`, `education`, `skills`, and `certifications` sections as needed.
+   - Save the file.
 
-3.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
+Here's an example structure of the `resume.yaml`:
 
-4.  **`.prettierrc`**: This is a configuration file for [Prettier](https://prettier.io/). Prettier is a tool to help keep the formatting of your code consistent.
+```yaml
+experience:
+  - position: "Senior Software Engineer"
+    company: "TechCorp Solutions"
+    duration: "Jan 2022 - Present"
+    details: "Lead frontend development using React, TypeScript, and Tailwind CSS."
 
-5.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.org/docs/browser-apis/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
+education:
+  - degree: "Bachelor of Science in Computer Science"
+    institution: "State University"
+    duration: "2015 - 2019"
 
-6.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.org/docs/gatsby-config/) for more detail).
+skills:
+  - "JavaScript"
+  - "React"
+  - "Tailwind CSS"
 
-7.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.org/docs/node-apis/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
+certifications:
+  - title: "AWS Certified Solutions Architect"
+    issuer: "Amazon Web Services"
+    year: "2023"
+```
 
-8.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.org/docs/ssr-apis/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
+3. **Validate Your Changes** (Optional):
+   - Run `npm run validate-resume` to check your YAML file for errors before testing.
+   - This script will verify the structure and required fields.
 
-9.  **`LICENSE`**: Gatsby is licensed under the MIT license.
+4. **Run the Application**:
+   - Ensure that your local development server is running with `npm run dev`.
+   - Changes to the YAML file will be reflected automatically in the application.
 
-10. **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
+### Troubleshooting
 
-11. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
+- **Fetching Errors**: Make sure the `resume.yaml` is correctly placed in the `/public` directory so it's accessible to the client-side application.
+- **Invalid YAML**: Ensure that the YAML syntax is correct. Use online YAML validators or run `npm run validate-resume`.
+- **Missing Fields**: The validation script will warn you about missing required fields like `position`, `company`, `duration` for experience entries.
 
-12. **`README.md`**: A text file containing useful reference information about your project.
+## 🛠 Development
 
-## 🎓 Learning Gatsby
+### Available Scripts
 
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.org/). Here are some places to start:
+- `npm run dev` - Start development server with hot reload
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build locally
+- `npm run lint` - Run ESLint to check for issues
+- `npm run lint:fix` - Run ESLint and automatically fix issues
+- `npm run format` - Format code with Prettier
+- `npm run format:check` - Check if code is properly formatted
+- `npm run validate-resume` - Validate the resume.yaml file
+- `npm run deploy` - Deploy to GitHub Pages
 
-- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.org/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
+### Code Quality
 
-- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.org/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
+This project uses ESLint and Prettier for code quality and formatting:
 
-## 💫 Deploy
+- **ESLint**: Configured with React-specific rules and best practices
+- **Prettier**: Ensures consistent code formatting across the project
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
+Run `npm run lint` and `npm run format` before committing changes.
 
-<!-- AUTO-GENERATED-CONTENT:END -->
+### Tech Stack
+
+- **Frontend**: React 19, Vite, Tailwind CSS
+- **UI Components**: Headless UI, Heroicons, React Icons
+- **Animation**: Framer Motion
+- **Routing**: React Router DOM
+- **Development**: ESLint, Prettier
+- **Deployment**: GitHub Pages via GitHub Actions
+
+## 🚀 Deployment
+
+This project is configured for automatic deployment to GitHub Pages:
+
+1. **Automatic Deployment**: Every push to the `main` branch triggers automatic deployment via GitHub Actions
+2. **Manual Deployment**: Run `npm run deploy` to deploy manually
+3. **Status**: Check the deployment status badge at the top of this README
+
+### Deployment Configuration
+
+- The site is deployed to: `https://gene-smith.github.io/gene-portfolio`
+- GitHub Actions workflow: `.github/workflows/deploy.yml`
+- Build output: `dist/` directory
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Make your changes
+4. Run tests and linting (`npm run lint && npm run format:check`)
+5. Commit your changes (`git commit -m 'Add amazing feature'`)
+6. Push to the branch (`git push origin feature/amazing-feature`)
+7. Open a Pull Request
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).

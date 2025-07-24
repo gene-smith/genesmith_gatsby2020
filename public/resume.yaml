@@ -1,0 +1,51 @@
+experience:
+  - position: "Senior Software Engineer"
+    company: "TechCorp Solutions"
+    duration: "Jan 2022 - Present"
+    details: "Lead frontend development using React, TypeScript, and Tailwind CSS. Built responsive web applications serving 100k+ users daily."
+  
+  - position: "Software Engineer"
+    company: "StartupTech Inc."
+    duration: "Jun 2020 - Dec 2021"
+    details: "Developed full-stack applications using React, Node.js, and PostgreSQL. Collaborated with cross-functional teams to deliver features on time."
+  
+  - position: "Junior Developer"
+    company: "WebDev Agency"
+    duration: "Jan 2019 - May 2020"
+    details: "Created responsive websites and maintained existing codebases. Gained experience with modern web technologies and agile methodologies."
+
+education:
+  - degree: "Bachelor of Science in Computer Science"
+    institution: "State University"
+    duration: "2015 - 2019"
+  
+  - degree: "Associate Degree in Web Development"
+    institution: "Community College"
+    duration: "2013 - 2015"
+
+skills:
+  - "JavaScript"
+  - "TypeScript"
+  - "React"
+  - "Node.js"
+  - "Tailwind CSS"
+  - "PostgreSQL"
+  - "Git"
+  - "Docker"
+  - "AWS"
+  - "GraphQL"
+  - "REST APIs"
+  - "Agile/Scrum"
+
+certifications:
+  - title: "AWS Certified Solutions Architect"
+    issuer: "Amazon Web Services"
+    year: "2023"
+  
+  - title: "Certified Kubernetes Administrator"
+    issuer: "Cloud Native Computing Foundation"
+    year: "2022"
+  
+  - title: "Professional Scrum Master I"
+    issuer: "Scrum.org"
+    year: "2021"
