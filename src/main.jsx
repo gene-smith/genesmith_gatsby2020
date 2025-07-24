@@ -8,7 +8,7 @@ import App from './App'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <ThemeProvider>
-      <BrowserRouter basename='/gene-portfolio'>
+      <BrowserRouter basename='/'>
         <App />
       </BrowserRouter>
     </ThemeProvider>

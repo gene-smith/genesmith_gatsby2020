@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Base dark mode styles - force dark mode globally */
+html,
+body {
+  @apply bg-gray-900 text-white;
+}
+
+/* Ensure root element also has dark background */
+#root {
+  @apply min-h-screen bg-gray-900 text-white;
+}

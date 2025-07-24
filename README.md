@@ -1,6 +1,6 @@
 # Gene Portfolio
 
-[![Deploy to GitHub Pages](https://github.com/gene-smith/gene-portfolio/actions/workflows/deploy.yml/badge.svg)](https://github.com/gene-smith/gene-portfolio/actions/workflows/deploy.yml)
+[![Deploy to GitHub Pages](https://github.com/gene-smith/genesmith_gatsby2020/actions/workflows/deploy.yml/badge.svg)](https://github.com/gene-smith/genesmith_gatsby2020/actions/workflows/deploy.yml)
 
 A modern, responsive portfolio website built with React, Vite, and Tailwind CSS. Features a dynamic resume section powered by YAML data and automatic deployment to GitHub Pages.
 
@@ -14,8 +14,8 @@ A modern, responsive portfolio website built with React, Vite, and Tailwind CSS.
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/gene-smith/gene-portfolio.git
-   cd gene-portfolio
+   git clone https://github.com/gene-smith/genesmith_gatsby2020.git
+   cd genesmith_gatsby2020
    ```
 
 2. **Install dependencies**:
@@ -149,7 +149,7 @@ This project is configured for automatic deployment to GitHub Pages:
 
 ### Deployment Configuration
 
-- The site is deployed to: `https://gene-smith.github.io/gene-portfolio`
+- The site is deployed to: `https://gene-smith.github.io/genesmith_gatsby2020`
 - GitHub Actions workflow: `.github/workflows/deploy.yml`
 - Build output: `dist/` directory
 
