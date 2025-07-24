@@ -1,0 +1,7 @@
+dist/
+node_modules/
+public/
+*.md
+*.yaml
+*.yml
+*.json
