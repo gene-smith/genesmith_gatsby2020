@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Base dark mode styles */
+body {
+  @apply bg-white dark:bg-gray-900 text-gray-900 dark:text-white;
+}
+
+/* Ensure full page background coverage */
+html {
+  @apply bg-white dark:bg-gray-900;
+}
