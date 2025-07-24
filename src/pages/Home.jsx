@@ -6,7 +6,6 @@ import {
   FaLinkedinIn as LinkedIn,
   FaFacebookF as Facebook,
   FaSpotify as Spotify,
-  FaKeybase as Keybase,
 } from 'react-icons/fa'
 import Appbar from '../components/Appbar'
 
@@ -73,16 +72,6 @@ export default function Home() {
               aria-label='LinkedIn Profile'
             >
               <LinkedIn />
-            </motion.a>
-            <motion.a
-              className='text-2xl sm:text-3xl lg:text-4xl icon focus:outline-none focus:ring-2 focus:ring-brand focus:ring-opacity-50 rounded p-2 hover:scale-110 transition-transform'
-              href='https://keybase.io/genesmith'
-              target='_blank'
-              rel='noopener noreferrer'
-              {...iconAnimationProps}
-              aria-label='Keybase Profile'
-            >
-              <Keybase />
             </motion.a>
             <motion.a
               className='text-2xl sm:text-3xl lg:text-4xl icon focus:outline-none focus:ring-2 focus:ring-brand focus:ring-opacity-50 rounded p-2 hover:scale-110 transition-transform'
