@@ -5,7 +5,6 @@ import Link from './Link'
 
 const navigation = [
   { name: 'Home', href: '/' },
-  { name: 'Projects', href: '/projects' },
   { name: 'Resume', href: '/resume' },
 ]
 
@@ -17,20 +16,10 @@ export default function Appbar() {
     >
       {({ open }) => (
         <>
-          <div className='flex justify-between items-center h-16'>
-            {/* Logo/Brand */}
-            <div className='flex-shrink-0'>
-              <Link
-                to='/'
-                className='text-xl font-bold text-brand hover:text-brand/80 focus:text-brand focus:outline-none focus:ring-2 focus:ring-brand focus:ring-opacity-50 rounded px-2 py-1'
-              >
-                Gene Smith
-              </Link>
-            </div>
-
+          <div className='flex justify-center items-center h-16'>
             {/* Desktop Navigation */}
             <div className='hidden md:block'>
-              <div className='ml-10 flex items-baseline space-x-8'>
+              <div className='flex items-baseline space-x-8'>
                 {navigation.map(item => (
                   <Link
                     key={item.name}
