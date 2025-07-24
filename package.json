@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://gene-smith.github.io/gene-portfolio",
+  "homepage": "https://gene-smith.github.io/genesmith_gatsby2020",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

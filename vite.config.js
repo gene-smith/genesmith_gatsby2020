@@ -19,7 +19,7 @@ export default defineConfig({
       },
     },
   ],
-  base: '/gene-portfolio/',
+  base: '/genesmith_gatsby2020/',
   build: {
     rollupOptions: {
       output: {
