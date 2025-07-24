@@ -1,6 +1,58 @@
 # Gene Portfolio
 
-A modern portfolio website built with React, Vite, and Tailwind CSS.
+[![Deploy to GitHub Pages](https://github.com/gene-smith/gene-portfolio/actions/workflows/deploy.yml/badge.svg)](https://github.com/gene-smith/gene-portfolio/actions/workflows/deploy.yml)
+
+A modern, responsive portfolio website built with React, Vite, and Tailwind CSS. Features a dynamic resume section powered by YAML data and automatic deployment to GitHub Pages.
+
+## 🚀 Quick Start
+
+### Prerequisites
+- Node.js (version 16 or higher)
+- npm or yarn package manager
+
+### Installation
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/gene-smith/gene-portfolio.git
+   cd gene-portfolio
+   ```
+
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server**:
+   ```bash
+   npm run dev
+   ```
+
+4. **Open your browser** and navigate to `http://localhost:5173`
+
+### Build for Production
+
+```bash
+npm run build
+npm run preview  # Preview the production build locally
+```
+
+## 📁 Project Structure
+
+```
+gene-portfolio/
+├── public/
+│   ├── resume.yaml          # Resume data (edit this!)
+│   └── resume.pdf           # PDF version of resume
+├── src/
+│   ├── components/          # React components
+│   ├── pages/              # Page components
+│   ├── contexts/           # React contexts (theme, etc.)
+│   ├── hooks/              # Custom React hooks
+│   └── utils/              # Utility functions
+├── .github/workflows/      # GitHub Actions for deployment
+└── package.json
+```
 
 ## Resume Data Management
 
@@ -55,15 +107,62 @@ certifications:
 - **Invalid YAML**: Ensure that the YAML syntax is correct. Use online YAML validators or run `npm run validate-resume`.
 - **Missing Fields**: The validation script will warn you about missing required fields like `position`, `company`, `duration` for experience entries.
 
-## Development
+## 🛠 Development
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Available Scripts
 
-Currently, two official plugins are available:
+- `npm run dev` - Start development server with hot reload
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build locally
+- `npm run lint` - Run ESLint to check for issues
+- `npm run lint:fix` - Run ESLint and automatically fix issues
+- `npm run format` - Format code with Prettier
+- `npm run format:check` - Check if code is properly formatted
+- `npm run validate-resume` - Validate the resume.yaml file
+- `npm run deploy` - Deploy to GitHub Pages
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Code Quality
 
-### Expanding the ESLint configuration
+This project uses ESLint and Prettier for code quality and formatting:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **ESLint**: Configured with React-specific rules and best practices
+- **Prettier**: Ensures consistent code formatting across the project
+
+Run `npm run lint` and `npm run format` before committing changes.
+
+### Tech Stack
+
+- **Frontend**: React 19, Vite, Tailwind CSS
+- **UI Components**: Headless UI, Heroicons, React Icons
+- **Animation**: Framer Motion
+- **Routing**: React Router DOM
+- **Development**: ESLint, Prettier
+- **Deployment**: GitHub Pages via GitHub Actions
+
+## 🚀 Deployment
+
+This project is configured for automatic deployment to GitHub Pages:
+
+1. **Automatic Deployment**: Every push to the `main` branch triggers automatic deployment via GitHub Actions
+2. **Manual Deployment**: Run `npm run deploy` to deploy manually
+3. **Status**: Check the deployment status badge at the top of this README
+
+### Deployment Configuration
+
+- The site is deployed to: `https://gene-smith.github.io/gene-portfolio`
+- GitHub Actions workflow: `.github/workflows/deploy.yml`
+- Build output: `dist/` directory
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Make your changes
+4. Run tests and linting (`npm run lint && npm run format:check`)
+5. Commit your changes (`git commit -m 'Add amazing feature'`)
+6. Push to the branch (`git push origin feature/amazing-feature`)
+7. Open a Pull Request
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
