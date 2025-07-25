@@ -4,12 +4,8 @@ import {
   FaTwitter as Twitter,
   FaGithub as Github,
   FaLinkedinIn as LinkedIn,
-  FaAngellist as AngelList,
   FaFacebookF as Facebook,
-  FaRedditAlien as Reddit,
   FaSpotify as Spotify,
-  FaMediumM as Medium,
-  FaKeybase as Keybase,
 } from 'react-icons/fa'
 import Appbar from '../components/Appbar'
 
@@ -54,9 +50,7 @@ export default function Home() {
 
         {/* Responsive intro text with better mobile spacing */}
         <div className='text-gray-600 dark:text-gray-400 mx-4 sm:mx-8 lg:mx-12 my-6 sm:my-8 text-lg sm:text-xl lg:text-2xl info leading-relaxed'>
-          Seasoned marketing executive, experienced marketing technologist and a
-          machine learning & red wine enthusiast. Howard U. Follow me. Contact
-          me. Etc....
+          Seasoned marketing executive/technologist, experienced solutions architect, and AI & red wine enthusiast. Howard U. Follow me. Contact me. Etc....
         </div>
 
         {/* Responsive closing code block */}
@@ -66,7 +60,7 @@ export default function Home() {
 
         {/* Responsive social icons grid */}
         <div className='mt-8 sm:mt-12'>
-          <div className='grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-9 gap-4 sm:gap-6 lg:gap-8 justify-items-center'>
+          <div className='flex flex-wrap justify-center gap-4 sm:gap-6 lg:gap-8 max-w-md mx-auto'>
             <motion.a
               className='text-2xl sm:text-3xl lg:text-4xl icon focus:outline-none focus:ring-2 focus:ring-brand focus:ring-opacity-50 rounded p-2 hover:scale-110 transition-transform'
               href='https://www.linkedin.com/in/genesmith1'
@@ -76,26 +70,6 @@ export default function Home() {
               aria-label='LinkedIn Profile'
             >
               <LinkedIn />
-            </motion.a>
-            <motion.a
-              className='text-2xl sm:text-3xl lg:text-4xl icon focus:outline-none focus:ring-2 focus:ring-brand focus:ring-opacity-50 rounded p-2 hover:scale-110 transition-transform'
-              href='https://angel.co/gene-smith?public_profile=1'
-              target='_blank'
-              rel='noopener noreferrer'
-              {...iconAnimationProps}
-              aria-label='AngelList Profile'
-            >
-              <AngelList />
-            </motion.a>
-            <motion.a
-              className='text-2xl sm:text-3xl lg:text-4xl icon focus:outline-none focus:ring-2 focus:ring-brand focus:ring-opacity-50 rounded p-2 hover:scale-110 transition-transform'
-              href='https://keybase.io/genesmith'
-              target='_blank'
-              rel='noopener noreferrer'
-              {...iconAnimationProps}
-              aria-label='Keybase Profile'
-            >
-              <Keybase />
             </motion.a>
             <motion.a
               className='text-2xl sm:text-3xl lg:text-4xl icon focus:outline-none focus:ring-2 focus:ring-brand focus:ring-opacity-50 rounded p-2 hover:scale-110 transition-transform'
@@ -119,16 +93,6 @@ export default function Home() {
             </motion.a>
             <motion.a
               className='text-2xl sm:text-3xl lg:text-4xl icon focus:outline-none focus:ring-2 focus:ring-brand focus:ring-opacity-50 rounded p-2 hover:scale-110 transition-transform'
-              href='https://www.reddit.com/user/gene-smith/'
-              target='_blank'
-              rel='noopener noreferrer'
-              {...iconAnimationProps}
-              aria-label='Reddit Profile'
-            >
-              <Reddit />
-            </motion.a>
-            <motion.a
-              className='text-2xl sm:text-3xl lg:text-4xl icon focus:outline-none focus:ring-2 focus:ring-brand focus:ring-opacity-50 rounded p-2 hover:scale-110 transition-transform'
               href='https://twitter.com/gene_r_smith'
               target='_blank'
               rel='noopener noreferrer'
@@ -136,16 +100,6 @@ export default function Home() {
               aria-label='Twitter Profile'
             >
               <Twitter />
-            </motion.a>
-            <motion.a
-              className='text-2xl sm:text-3xl lg:text-4xl icon focus:outline-none focus:ring-2 focus:ring-brand focus:ring-opacity-50 rounded p-2 hover:scale-110 transition-transform'
-              href='https://medium.com/@gene_r_smith'
-              target='_blank'
-              rel='noopener noreferrer'
-              {...iconAnimationProps}
-              aria-label='Medium Profile'
-            >
-              <Medium />
             </motion.a>
             <motion.a
               className='text-2xl sm:text-3xl lg:text-4xl icon focus:outline-none focus:ring-2 focus:ring-brand focus:ring-opacity-50 rounded p-2 hover:scale-110 transition-transform'
